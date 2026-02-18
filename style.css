@@ -1,0 +1,746 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); 
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6fb;
+    color: #2b2b2b;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #111827;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #facc15;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #facc15;
+}
+
+/* BUTTON */
+.btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #f97316;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background: #facc15;
+    color: #111827 !important;
+}
+
+.btn-secondary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #1d4ed8;
+}
+
+.full {
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #111827, #2563eb);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    gap: 25px;
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.icon {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+/* AUTH */
+.auth-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.auth-left {
+    flex: 1;
+    background: linear-gradient(135deg, #111827, #2563eb);
+    color: white;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-left h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.auth-left p {
+    opacity: 0.9;
+    max-width: 450px;
+}
+
+.auth-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* INPUTS */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+}
+
+/* ROLE */
+.role-select {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.role-select label {
+    font-weight: 600;
+}
+
+/* LINK */
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-link a {
+    font-weight: bold;
+    color: #f97316;
+    text-decoration: none;
+}
+
+/* DASHBOARD */
+.dashboard {
+    padding: 60px 0;
+}
+
+.dash-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.profile-box {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile-box .info {
+    margin-bottom: 10px;
+}
+
+.profile-box h2 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.profile-box p {
+    opacity: 0.8;
+}
+
+.dash-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.dash-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.status-active {
+    font-weight: 700;
+    color: #16a34a;
+    font-size: 1.2rem;
+}
+
+.status-inactive {
+    font-weight: 700;
+    color: #dc2626;
+    font-size: 1.2rem;
+}
+
+.map-placeholder {
+    height: 140px;
+    background: #f4f6fb;
+    border-radius: 12px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+/* TABLE */
+.table-box {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #111827;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: #111827;
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-small {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* MOBILE MENU */
+.menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    color: #facc15;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #111827;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-links a {
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .auth-wrapper {
+        flex-direction: column;
+    }
+
+    .auth-left {
+        text-align: center;
+        padding: 60px 20px;
+    }
+}
+
+/* Rider Page */
+/* --- SHARED COMPONENTS --- */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.status-badge {
+    padding: 6px 16px;
+    border-radius: 99px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.status-badge.safe {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-badge.active-trip {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #3b82f6;
+}
+
+/* --- RIDER DASHBOARD UNIQUE STYLES --- */
+.mode-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #3b82f6;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.dash-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+}
+
+.emergency-card {
+    border: 2px solid #fee2e2;
+    background: linear-gradient(to bottom, #ffffff, #fff5f5);
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn.full { width: 100%; box-sizing: border-box; }
+
+.btn-sos {
+    background: #ef4444;
+    color: white;
+    font-size: 1.2rem;
+    padding: 18px;
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.4);
+}
+
+.btn-sos:active { transform: translateY(2px); box-shadow: none; }
+
+.btn-primary { background: #3b82f6; color: white; }
+.btn-secondary { background: #f3f4f6; color: #374151; }
+
+/* --- RIDER CONTACT LIST --- */
+.mini-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.9rem;
+}
+
+.mini-item .relation {
+    color: #9ca3af;
+    font-size: 0.8rem;
+}
+
+.map-placeholder {
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    color: #6b7280;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+
+/* Contact Page */
+
+/* 1. Profile Status Layout */
+.profile-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border-left: 6px solid #2563eb; /* Blue accent for tracking */
+}
+
+/* 2. Dynamic Status Badges */
+.status-badge {
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.status-badge.safe {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.status-badge.danger {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+    animation: pulse-danger 1.5s infinite;
+}
+
+/* 3. Emergency Action Buttons */
+.action-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.action-list .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+/* 4. Safety Timeline / Last Ping */
+.ping-info {
+    font-size: 0.95rem;
+    color: #4b5563;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.ping-time {
+    display: block;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 5px;
+}
+
+/* 5. Emergency Pulse Animation */
+@keyframes pulse-danger {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+}
+
+/* Responsive Tweak for Profile Box */
+@media (max-width: 600px) {
+    .profile-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+/* Button Page */
+.button-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+}
+
+.button-container {
+    max-width: 600px;
+    text-align: center;
+}
+
+.button-card {
+    padding: 50px 35px;
+}
+
+.safety-button {
+    font-size: 1.4rem;
+    padding: 18px;
+    margin-top: 25px;
+}
+
+.safety-button:hover {
+    background: #dc2626;
+    transform: scale(1.02);
+}
+
+.decor-line {
+    height: 4px;
+    width: 60px;
+    background: #f97316;
+    margin: 30px auto 20px auto;
+    border-radius: 10px;
+}
+
+.button-note {
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+/* Big Round Safety Button */
+
+.button-card {
+    text-align: center;
+    padding: 70px 30px;
+    position: relative;
+}
+
+.big-safe-btn {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: none;
+    background: radial-gradient(circle at top left, #f97316, #dc2626);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 
+        0 15px 30px rgba(0,0,0,0.2),
+        inset 0 -8px 15px rgba(0,0,0,0.2);
+    transition: 0.15s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.big-safe-btn:hover {
+    transform: scale(1.05);
+}
+
+.big-safe-btn:active,
+.big-safe-btn.pressed {
+    transform: scale(0.96);
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.25),
+        inset 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Subtext */
+.button-subtext {
+    margin-top: 25px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Pulse Ring Animation */
+.pulse-ring {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(249, 115, 22, 0.25);
+    animation: pulse 2s infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .big-safe-btn {
+        width: 180px;
+        height: 180px;
+        font-size: 1.5rem;
+    }
+
+    .pulse-ring {
+        width: 220px;
+        height: 220px;
+    }
+}
